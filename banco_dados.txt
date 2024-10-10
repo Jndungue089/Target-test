@@ -1,0 +1,26 @@
+Modelo Lógico (Tabelas e Relacionamentos)
+Clientes:
+
+id_cliente (PK): Chave primária.
+razao_social: Nome ou razão social do cliente.
+id_estado (FK): Chave estrangeira que referencia o estado do cliente.
+Telefones:
+
+id_telefone (PK): Chave primária.
+id_cliente (FK): Chave estrangeira que referencia o cliente.
+numero: Número de telefone do cliente.
+id_tipo_telefone (FK): Chave estrangeira que referencia o tipo de telefone.
+Tipos_de_telefone:
+
+id_tipo_telefone (PK): Chave primária.
+descricao: Descrição do tipo de telefone (comercial, residencial, celular, etc.).
+Estados:
+
+id_estado (PK): Chave primária.
+sigla: Sigla do estado (por exemplo: "SP" para São Paulo).
+nome: Nome completo do estado (por exemplo: "São Paulo").
+Relacionamentos:
+Um cliente pode ter vários telefones (relação 1
+entre Clientes e Telefones).
+Um telefone tem um tipo (relação N:1 entre Telefones e Tipos_de_telefone).
+Um cliente pertence a um estado (relação N:1 entre Clientes e Estados).
